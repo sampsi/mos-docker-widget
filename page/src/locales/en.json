@@ -1,0 +1,25 @@
+{
+  "plugin_docker_widget": {
+    "title": "Docker Widget",
+    "running": "running",
+    "updates": "updates",
+    "open_docker": "Open Docker page",
+    "empty": "No containers to show",
+    "forbidden": "Docker status requires an admin account",
+    "load_failed": "Could not load Docker status",
+    "update_available": "Update available",
+    "stack": "Stack",
+    "webui": "Web UI",
+    "start": "Start",
+    "stop": "Stop",
+    "restart": "Restart",
+    "settings": "Settings",
+    "interval": "Refresh interval (seconds)",
+    "show_stopped": "Show stopped containers",
+    "show_stacks": "Show compose stacks",
+    "shown_in_widget": "Shown in the widget",
+    "save": "Save",
+    "saved": "Saved",
+    "save_failed": "Saving failed"
+  }
+}

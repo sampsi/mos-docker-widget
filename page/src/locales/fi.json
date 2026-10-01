@@ -1,0 +1,25 @@
+{
+  "plugin_docker_widget": {
+    "title": "Docker-widget",
+    "running": "käynnissä",
+    "updates": "päivitystä",
+    "open_docker": "Avaa Docker-sivu",
+    "empty": "Ei näytettäviä kontteja",
+    "forbidden": "Docker-tila vaatii ylläpitäjätunnuksen",
+    "load_failed": "Docker-tilaa ei saatu haettua",
+    "update_available": "Päivitys saatavilla",
+    "stack": "Stack",
+    "webui": "Web-käyttöliittymä",
+    "start": "Käynnistä",
+    "stop": "Pysäytä",
+    "restart": "Käynnistä uudelleen",
+    "settings": "Asetukset",
+    "interval": "Päivitysväli (sekuntia)",
+    "show_stopped": "Näytä pysäytetyt kontit",
+    "show_stacks": "Näytä compose-stackit",
+    "shown_in_widget": "Näytetään widgetissä",
+    "save": "Tallenna",
+    "saved": "Tallennettu",
+    "save_failed": "Tallennus epäonnistui"
+  }
+}

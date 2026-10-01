@@ -1,0 +1,25 @@
+{
+  "plugin_docker_widget": {
+    "title": "Docker Widget",
+    "running": "laufen",
+    "updates": "Updates",
+    "open_docker": "Docker-Seite öffnen",
+    "empty": "Keine Container anzuzeigen",
+    "forbidden": "Docker-Status erfordert ein Administratorkonto",
+    "load_failed": "Docker-Status konnte nicht geladen werden",
+    "update_available": "Update verfügbar",
+    "stack": "Stack",
+    "webui": "Web-UI",
+    "start": "Starten",
+    "stop": "Stoppen",
+    "restart": "Neu starten",
+    "settings": "Einstellungen",
+    "interval": "Aktualisierungsintervall (Sekunden)",
+    "show_stopped": "Gestoppte Container anzeigen",
+    "show_stacks": "Compose-Stacks anzeigen",
+    "shown_in_widget": "Im Widget angezeigt",
+    "save": "Speichern",
+    "saved": "Gespeichert",
+    "save_failed": "Speichern fehlgeschlagen"
+  }
+}
