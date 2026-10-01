@@ -21,6 +21,7 @@
     "save": "Tallenna",
     "saved": "Tallennettu",
     "save_failed": "Tallennus epäonnistui",
-    "edit": "Muokkaa"
+    "edit": "Muokkaa",
+    "actions": "Toiminnot"
   }
 }

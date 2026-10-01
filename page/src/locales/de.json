@@ -21,6 +21,7 @@
     "save": "Speichern",
     "saved": "Gespeichert",
     "save_failed": "Speichern fehlgeschlagen",
-    "edit": "Bearbeiten"
+    "edit": "Bearbeiten",
+    "actions": "Aktionen"
   }
 }

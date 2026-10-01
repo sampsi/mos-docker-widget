@@ -7,7 +7,7 @@ similar to the Docker overview on the Unraid dashboard.
   orange = stack partly running)
 - `12/15 running` summary and the number of available updates
 - click a name to open its web UI (`mos.webui` label, e.g. `http://[ADDRESS]:[PORT:3001]`)
-- menu per container: web UI, start, stop, restart and **Edit** (opens the MOS container settings page)
+- menu per container (click the icon or ⋮): web UI, start, stop, restart and **Edit** (opens the MOS container settings page)
 - compose stacks are shown as one row (`3/4`) and can be started/stopped as a whole
 - plugin page (Plugins → Docker Widget): refresh interval, show/hide stopped containers
   and stacks, choose which containers are shown

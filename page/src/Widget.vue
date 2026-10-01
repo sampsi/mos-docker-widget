@@ -28,7 +28,7 @@
       </div>
 
       <div v-for="item in visible" :key="item.key" class="dw-row d-flex align-center" :class="{ 'dw-stopped': item.state === 'exited' || item.state === 'created' }">
-        <div class="dw-icon">
+        <div class="dw-icon dw-clickable" :title="$t('plugin_docker_widget.actions')" @click.stop="openMenu(item)">
           <img v-if="!broken[item.key]" :src="item.icon" alt="" width="24" height="24" @error="broken[item.key] = true" />
           <v-icon v-else size="22" color="grey">{{ item.type === 'stack' ? 'mdi-layers-outline' : 'mdi-docker' }}</v-icon>
           <span class="dw-dot" :class="dotClass(item)" />
@@ -45,7 +45,7 @@
           </div>
         </div>
         <v-progress-circular v-if="busy[item.key]" indeterminate size="16" width="2" class="mr-1" />
-        <v-menu v-else location="bottom end">
+        <v-menu v-else :model-value="menuOpen === item.key" location="bottom end" @update:model-value="(v) => (menuOpen = v ? item.key : null)">
           <template #activator="{ props }">
             <v-btn v-bind="props" size="x-small" variant="text" icon="mdi-dots-vertical" />
           </template>
@@ -75,6 +75,13 @@ const { loading, error, items, busy, counts, refresh, act } = useDocker();
 const settings = ref({ ...DEFAULT_SETTINGS });
 const broken = reactive({});
 const poll = usePolling(refresh, 5);
+
+// The icon opens the same menu as the ⋮ button (anchored at the ⋮ button).
+const menuOpen = ref(null);
+const openMenu = (item) => {
+  if (busy.value[item.key]) return;
+  menuOpen.value = menuOpen.value === item.key ? null : item.key;
+};
 
 const isUp = (item) => item.state === 'running' || item.state === 'partial' || item.state === 'restarting';
 
@@ -124,7 +131,14 @@ onUnmounted(() => poll.stop());
   align-items: center;
   justify-content: center;
 }
+.dw-clickable {
+  cursor: pointer;
+}
+.dw-clickable:hover img {
+  transform: scale(1.12);
+}
 .dw-icon img {
+  transition: transform 0.12s;
   width: 24px;
   height: 24px;
   object-fit: contain;
