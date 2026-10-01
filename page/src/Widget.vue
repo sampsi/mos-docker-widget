@@ -54,6 +54,12 @@
             <v-list-item v-if="!isUp(item) || item.state === 'partial'" prepend-icon="mdi-play" :title="$t('plugin_docker_widget.start')" @click="act(item, 'start')" />
             <v-list-item v-if="isUp(item)" prepend-icon="mdi-restart" :title="$t('plugin_docker_widget.restart')" @click="act(item, 'restart')" />
             <v-list-item v-if="isUp(item)" prepend-icon="mdi-stop" :title="$t('plugin_docker_widget.stop')" @click="act(item, 'stop')" />
+            <v-divider />
+            <v-list-item
+              prepend-icon="mdi-pencil"
+              :title="item.type === 'stack' ? $t('plugin_docker_widget.open_docker') : $t('plugin_docker_widget.edit')"
+              :to="item.type === 'stack' ? '/docker' : `/docker/change/${encodeURIComponent(item.name)}`"
+            />
           </v-list>
         </v-menu>
       </div>

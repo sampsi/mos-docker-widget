@@ -20,6 +20,7 @@
     "shown_in_widget": "Näytetään widgetissä",
     "save": "Tallenna",
     "saved": "Tallennettu",
-    "save_failed": "Tallennus epäonnistui"
+    "save_failed": "Tallennus epäonnistui",
+    "edit": "Muokkaa"
   }
 }
